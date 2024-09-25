@@ -179,14 +179,94 @@ body {
 }
 
 #page3 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: #fff;
 }
 
-#page2 img {
-  height: 300px;
-  width: 200px;
+#page3 .image-container {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#page3 .image-container .column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#page3 .image-container .image-overlay {
+  padding: 30px;
+}
+
+#page3 .image-container .image-div {
+  width: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+
+#page3 .image-container .image-div img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  object-position: center;
+}
+
+#page3 .image-container .image-div:hover img {
+  transform: scale(1.1);
+  transition: all ease 0.5s 0.1s;
+}
+
+#page3 .image-container .image-div:hover .image-overlay {
+  background-color: #000000;
+}
+
+#page3 .image-container .image-div:hover .image-overlay p {
+  color: #fff;
+  opacity: 1;
+}
+
+#page3 .image-container .image-div .image-overlay {
+  position: absolute;
+  background-color: #00000011;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all ease 0.5s 0.1s;
+  z-index: 9;
+}
+
+#page3 .image-container .image-div .image-overlay p {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+  opacity: 0;
+  transition: all ease 0.5s 0.1s;
+}
+
+.footer {
+  height: 40vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer .foot {
+  height: 50%;
+  width: 100%;
+  background-color: #000;
+}
+
+.footer h4{
+  text-transform: uppercase;
+  cursor: pointer;
 }

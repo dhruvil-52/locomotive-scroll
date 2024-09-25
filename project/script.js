@@ -51,3 +51,10 @@ products.forEach(function (product) {
     page2.style.backgroundImage = `url(${img})`;
   });
 });
+
+document
+  .querySelector(".footer h4")
+  .addEventListener("click", function () {
+    console.log("called to top")
+    scroll.scrollTo(0)
+  });

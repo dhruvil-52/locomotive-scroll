@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "freight-big-pro", serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  /* display: none; */
+}
+#loader h1 {
+  font-size: 7vw;
+  font-weight: 100;
+  line-height: 0.72em;
+  letter-spacing: -0.03em;
+  position: relative;
+  z-index: 9;
+}
+
+#yellow-loader-1 {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  background-color: #f5e41b;
+  z-index: 8;
+}
+
+#yellow-loader-2 {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  background-color: #f5e41b;
+  z-index: 7;
+}
+
+#loader video {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  object-fit: cover;
+  z-index: 6;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5e41b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#page1 h1 {
+  font-size: 7vw;
+  font-weight: 100;
+  line-height: 0.72em;
+  letter-spacing: -0.03em;
+}
+
+#page1 h1 em {
+  font-weight: 100 !important;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+#page3 {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+}
+
+#page2 img {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}

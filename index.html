@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Locomotive Scroll CSS for smooth scrolling and effects -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The main container for LocomotiveScroll (dont give height/width) -->
+    <div id="main" data-scroll-container>
+
+      <!-- Page 1 section with a parallax image scroll effect -->
+      <div id="page1" data-scroll>
+        <img data-scroll data-scroll-speed="-5" src="images/4.jpg" alt="" />
+        <!-- The image scrolls slower than the page (negative speed creates a parallax effect) -->
+      </div>
+
+      <!-- Page 2 section with horizontally scrolling images -->
+      <div id="page2" data-scroll data-scroll-speed="-5">
+        <!-- Slow horizontal scroll (negative for reverse direction) -->
+        <!-- Enables horizontal scrolling -->
+        <img
+          data-scroll
+          data-scroll-speed="-5"
+          data-scroll-direction="horizontal"
+          src="images/1.jpg"
+          alt=""
+        />
+        <!-- Faster horizontal scroll in the opposite direction -->
+        <img
+          data-scroll
+          data-scroll-speed="5"
+          data-scroll-direction="horizontal"
+          src="images/2.jpg"
+          alt=""
+        />
+      </div>
+
+      <!-- Page 3 section (additional content) -->
+      <div id="page3" data-scroll></div>
+    </div>
+
+    <!-- Locomotive Scroll JavaScript for smooth scrolling and parallax effects -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

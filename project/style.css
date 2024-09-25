@@ -11,6 +11,10 @@ body {
   width: 100%;
 }
 
+#main {
+  background-color: #000;
+}
+
 #loader {
   height: 100vh;
   width: 100vw;
@@ -21,6 +25,7 @@ body {
   align-items: center;
   text-align: center;
   color: #fff;
+  z-index: 99;
   /* display: none; */
 }
 #loader h1 {
@@ -56,6 +61,13 @@ body {
   z-index: 6;
 }
 
+#nav {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 30px 50px;
+}
+
 #page1 {
   height: 100vh;
   width: 100vw;
@@ -81,6 +93,89 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+#page2 .product {
+  width: 100%;
+  position: relative;
+}
+
+#page2 .product h2 {
+  font-size: 5.5vw;
+  line-height: 10vh;
+  font-weight: 200;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#page2 .product:hover .moving-details {
+  transform: translate(0, -50%) scaleY(1);
+}
+
+#page2 .product:hover .moving-details .detail-name {
+  opacity: 1;
+}
+
+#page2 .product:hover h2 {
+  font-style: italic;
+  color: #000;
+}
+
+#page2 .product .moving-details {
+  width: 100%;
+  padding: 5px 0;
+  background-color: #f5e41b;
+  color: #000;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  transform: translate(0, -50%) scaleY(0);
+  transition: all ease 0.2s;
+}
+#page2 .product .moving-details .blur {
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f5e41b;
+  box-shadow: 10px 0 20px 20px #f5e41b, -10px 0 20px 20px #f5e41b;
+  z-index: 10;
+}
+#page2 .product .moving-details .detail-name-wrapper {
+  white-space: nowrap;
+  display: inline-block;
+  animation: move-details 15s linear infinite;
+}
+
+#page2 .product .moving-details .detail-name {
+  padding: 0 15px;
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  margin-right: 25px;
+  opacity: 0;
+  transition: all ease 0.2s 0.2s;
+}
+
+@keyframes move-details {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 #page3 {

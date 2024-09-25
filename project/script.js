@@ -32,15 +32,22 @@ function loading() {
   tl.to("#loader", {
     display: "none",
   });
-
-  const scroll = new LocomotiveScroll({
-    // The element on which LocomotiveScroll is applied
-    //   el: document.querySelector("#main"), //or
-    el: document.querySelector("[data-scroll-container]"),
-    // Enables smooth scrolling
-    smooth: true,
-    // Controls the scrolling speed (min=0, max=1, default=0.1); lower value means slower, smoother scrolling
-    // lerp: 0.02,
-  });
 }
 loading();
+
+// locomotiv scroll
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true,
+});
+
+// set page 2 background image as hover on title
+var products = document.querySelectorAll(".product");
+var page2 = document.querySelector("#page2");
+products.forEach(function (product) {
+  // on mouse enter change background image
+  product.addEventListener("mouseenter", function () {
+    const img = product.getAttribute("data-image");
+    page2.style.backgroundImage = `url(${img})`;
+  });
+});
